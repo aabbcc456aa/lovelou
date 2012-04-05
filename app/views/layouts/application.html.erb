@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= 'yunlei' %></title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+<%#= javascript_include_tag "/datepicker/WdatePicker" %>
+    <%= csrf_meta_tags %>
+<%#*<link rel="shortcut icon" href="/favicon.ico">%>
+    <%= yield :head %>  
+  </head>
+
+  <body>
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><a href="/">lou</a></h3>
+          <%= render :partial =>"shared/user_nav" %>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="main" class="container-fluid">
+        <%= notice_message %>
+        <%= yield %>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Copyright © 2011-<%=DateTime.now.year%>, huxiaolong, All Rights Reserved</p>
+      </div>
+    </footer>
+  </div> <!-- /container -->
+</body>
+</html>
