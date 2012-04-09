@@ -1,5 +1,5 @@
-#source 'http://ruby.taobao.org/'
-source 'http://rubygems.org'
+source 'http://ruby.taobao.org/'
+#source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'thin'
@@ -20,8 +20,11 @@ end
 #nodejs
 gem 'execjs'
 gem 'therubyracer'
+#gem 'mini_magick'
+#
 gem 'mini_magick'
-#gem 'kaminari'
+gem 'carrierwave'
+##gem 'kaminari'
 gem 'jquery-rails'
 
 # added 

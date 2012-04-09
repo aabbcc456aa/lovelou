@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120401031254) do
+ActiveRecord::Schema.define(:version => 20120409091337) do
+
+  create_table "photos", :force => true do |t|
+    t.string   "name"
+    t.string   "upload_person"
+    t.datetime "upload_time"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

@@ -1,0 +1,31 @@
+
+<div class="content">
+    <div class="box">
+    <%= form_for @photo , :html => {:multipart => true} do |f| %>
+      <fieldset>
+        <legend>上传图片</legend>
+        <%= render "shared/error_messages", :target => @photo %> 
+        <div class="clearfix"><%= f.label "图片名：" %>
+          <div class="input"> <%= f.text_field :name %> </div>
+        </div>
+        <div class="clearfix"><%= f.label "上传人：" %>
+          <div class="input"> <%= f.text_field :upload_person %> </div>
+        </div>
+        <div class="clearfix">
+          <%= f.label "url: " %>
+          <div class="input">
+           <%= image_tag(@photo.url) if @photo.url? %>
+          <%= f.file_field :url %>
+            <%#= f.hidden_field :url_cache %>
+          </div>
+        </div>
+         <div class="clearfix"><%= f.label "删除图片：" %>
+          <div class="input"> <%=  f.check_box :remove_url %> </div>
+        </div>
+        <div class="actions">
+          <%= f.submit "提交", :class => "btn primary" %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
