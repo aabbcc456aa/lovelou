@@ -12,7 +12,7 @@
           <div class="input"> <%= f.text_field :upload_person %> </div>
         </div>
         <div class="clearfix">
-          <%= f.label "url: " %>
+          <%= f.label "URL: " %>
           <div class="input">
            <%= image_tag(@photo.url) if @photo.url? %>
           <%= f.file_field :url %>
