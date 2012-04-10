@@ -1,0 +1,39 @@
+:per_page: 31
+:per_page_two: 29
+:per_page_three: 20
+:per_page_less1: 23
+:per_page_than1: 25
+:per_page_than2: 26
+:per_page_show: 10
+:version: #版本控制
+  :key: "alpha"
+  :value: "V2.07"
+:device:
+  :per_page: 29
+:equipment:
+  :per_page: 29
+:doc: "doc"
+:image: "image"
+:vedio: "vedio"
+:group: "group"
+:link_direct: 'public/upload_attachments'
+:pda_direct: public/pda_upload_attachments
+:group_image_path: "public/upload_attachments" #组图片存放路径
+:img_size:
+  :small: "120x160"
+:webservice:
+  :user_url: "http://ocs.sh.mor.cr:4000/UserServices.asmx?WSDL" #权限webservice
+  :pda_img_url: 'http://192.168.3.240:8888/RCCWebService/RCCService.asmx?WSDL'
+  :log_url: 'http://192.168.60.197:8001/LogService.svc?wsdl' #Log ws接口地址
+  :send_message_url: 'http://192.168.56.153:8080/OcsSms/services/SendMessageService?wsdl'
+
+:ip: "http://192.168.81.21:8090/sea/restws/SimpleTextWebService/0x04" #设备指令下发url
+:get_pda_image: "http://192.168.3.240:8888/RCCWebService/UploadFile/MA_MEDIA_RECORD/"
+:get_procedure_image: "http://192.168.3.240:8888/RCCWebService/UploadFile/"
+
+:home_url: "http://ocs.sh.mor.cr"
+
+:java:
+  :trouble_card: "http://192.168.81.21:8080/FCards/Cards.java"  #故障卡片地址
+  :trouble_card_index: "http://192.168.81.21:8080/FCards"  #故障卡片地址
+  :wiki: "http://192.168.81.21:8080/JSPWiki/Wiki.jsp?page=A1"    #案例库地址

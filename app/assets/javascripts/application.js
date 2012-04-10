@@ -6,6 +6,7 @@
 //= require jquery.fancybox-buttons
 //= require jquery.fancybox-thumbs
 //= require jquery.kwicks
+//= require jquery-ui-1.8.18.custom
 
 
 $().ready(function() {  

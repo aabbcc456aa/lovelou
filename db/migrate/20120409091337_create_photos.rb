@@ -5,6 +5,8 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :upload_person
       t.datetime :upload_time
       t.string :url
+      t.string :descript
+      t.integer :album_id
 
       t.timestamps
     end

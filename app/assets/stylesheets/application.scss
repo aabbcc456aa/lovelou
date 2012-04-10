@@ -4,6 +4,7 @@
  *= require_self
  *= require jquery.fancybox-buttons
  *= require jquery.fancybox-thumbs
+ *= require jquery-ui-1.8.18.custom
  */
 
 
@@ -15,8 +16,8 @@
         line-heihgt :0px;
         padding: 0px 10px 0px 0px; 
     }
-    .topbar div > ul li a  {
-            line-heihgt :0px;
+    .kwicks li  > a  {
+          line-heihgt :0px;
           padding: 0px 10px px 0px; 
     }
 
@@ -141,7 +142,7 @@ a[rel=userpopover] {
 }
 #main h1 { font-size:14px; line-height:26px; font-weight:bold; text-align:right; color:#333; margin-bottom:10px; }
 
-.topbar { position: static; margin-bottom:20px; line-height :110px;height :105px}
+.topbar { position: static; margin-bottom:20px; line-height :105px;height :105px}
 
 textarea.long { width:670px;}
 textarea.span16 { width:910px;}

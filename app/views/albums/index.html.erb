@@ -1,29 +1,16 @@
-<h1>Listing albums</h1>
+ <%= render "page_nav" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Question</th>
-    <th>Answer</th>
-    <th>Password</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="sidebar">
+  <div class="box">
+    <h2><%= t("users.already_have_account")%></h2>
+    <p style="line-height:20px;">
+      <%#= render :partial => "devise/shared/links" %>
+    </p>
+  </div>
+</div>
 
-<% @albums.each do |album| %>
-  <tr>
-    <td><%= album.name %></td>
-    <td><%= album.question %></td>
-    <td><%= album.answer %></td>
-    <td><%= album.password %></td>
-    <td><%= link_to 'Show', album %></td>
-    <td><%= link_to 'Edit', edit_album_path(album) %></td>
-    <td><%= link_to 'Destroy', album, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Album', new_album_path %>
+<div class="content">
+  <div class="box">
+    <%= link_to "我的相册" ,albums_path() %>
+  </div>
+</div>

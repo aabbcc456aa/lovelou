@@ -1,33 +1,22 @@
+
 <%= form_for(@album) do |f| %>
-  <% if @album.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
-
-      <ul>
-      <% @album.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <fieldset>
+    <legend>新建相册</legend>
+    <%= render "shared/error_messages", :target => @album %> 
+    <div class="clearfix"><%= f.label :name %>
+      <div class="inputs"><%= f.text_field :name , :required => true%></div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :question %><br />
-    <%= f.text_field :question %>
-  </div>
-  <div class="field">
-    <%= f.label :answer %><br />
-    <%= f.text_field :answer %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="clearfix"> <%= f.label :question %>
+      <div class="inputs"> <%= f.text_field :question , :required => true %> </div>
+    </div>
+    <div class="clearfix"> <%= f.label :answer %>
+      <div class="inputs"> <%= f.text_field :answer , :required => true %></div>
+    </div>
+    <div class="clearfix"> <%= f.label :password %>
+      <div class="inputs"><%= f.text_field :password , :required => true%> </div>
+    </div>
+    <div class="actions">
+      <%= f.submit "提交信息", :class => "btn primary" %>
+    </div>
+  </fieldset>
 <% end %>
