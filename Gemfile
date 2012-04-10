@@ -5,7 +5,7 @@ gem 'rails', '3.1.1'
 gem 'thin'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-#gem 'pg'
+gem 'pg'
 gem 'mysql2'
 #gem 'activerecord-postgresql-adapter'
 gem 'devise', '1.5.2'
