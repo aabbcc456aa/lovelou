@@ -1,5 +1,10 @@
 
-
+<ul class="kwicks" >  
+    <li id="kwick1"><%=link_to image_tag("/assets/meet.gif") , photos_path %></li>  
+    <li id="kwick2"><%=link_to image_tag("/assets/kwicks.gif") , photos_path %> </li>  
+    <li id="kwick3"><%=link_to image_tag("/assets/for.gif") , photos_path %></li>  
+    <li id="kwick4"><%=link_to image_tag("/assets/jquery.gif") , photos_path %></li>  
+</ul>  
 
 <% if current_user %>
   <ul>
@@ -8,13 +13,13 @@
       <a href="#" class="dropdown-toggle">系统管理</a>
     </li>
     <li class="dropdown <%= raw('active')  %>" data-dropdown="dropdown" >
-      <a href="#" class="dropdown-toggle">管理</a>
+      <a href="#" class="dropdown-toggle">相册管理</a>
     </li>
   
   </ul>
   <div class="pull-right">
     <ul>
-      <li><a href="#"><%= current_user.try(:email) %></a></li>
+      <li><a href="#"><%= current_user.try(:login) %></a></li>
       <li><a data-method="delete" href="/users/logout"><span class="label important">退出</span></a></li>
     </ul>
   </div>

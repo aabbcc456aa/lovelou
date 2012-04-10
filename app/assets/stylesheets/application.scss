@@ -2,9 +2,52 @@
  *= require bootstrap
  *= require jquery.fancybox
  *= require_self
- *= jquery.fancybox-buttons
- *= jquery.fancybox-thumbs
+ *= require jquery.fancybox-buttons
+ *= require jquery.fancybox-thumbs
  */
+
+
+
+
+
+/*  滑动导航 */
+    .topbar div > ul a, .nav a {
+        line-heihgt :0px;
+        padding: 0px 10px 0px 0px; 
+    }
+    .topbar div > ul li a  {
+            line-heihgt :0px;
+          padding: 0px 10px px 0px; 
+    }
+
+
+    .kwicks li{  
+        float: left;  
+        width: 125px;  
+        height: 104px;  
+        margin-right: 5px;  
+    }  
+    #kwick1 {   
+       background-color: #53b388;  
+    }  
+    #kwick2 {  
+        background-color: #5a69a9;  
+    }  
+    #kwick3 {  
+        background-color: #c26468;  
+    }  
+    #kwick4 {   
+        background-color: #bf7cc7;  
+        margin-right: none;  
+    }  
+
+  #title{
+        font-size:32px;
+         padding:5px 8px;
+    }
+
+
+
 html {
   width: 100%;
   height: 100%;
@@ -98,7 +141,7 @@ a[rel=userpopover] {
 }
 #main h1 { font-size:14px; line-height:26px; font-weight:bold; text-align:right; color:#333; margin-bottom:10px; }
 
-.topbar { position: static; margin-bottom:20px;}
+.topbar { position: static; margin-bottom:20px; line-height :110px;height :105px}
 
 textarea.long { width:670px;}
 textarea.span16 { width:910px;}
