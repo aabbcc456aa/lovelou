@@ -63,6 +63,22 @@ Lovelou::Application.configure do
   
   config.action_mailer.default_url_options = { :host => 'http://cold-snow-5967.heroku.com'}
 
+  
+  config.assets.compress = false
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    :address            => "smtp.126.com",
+    :port               => "25",
+    :domain             => "126.com", #you can also use google.com
+    :authentication     => "plain",
+    :user_name          => "huxiaolong100@126.com",
+    :password           => "333425456",
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => OpenSSL::SSL::VERIFY_NONE
+
+  }
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
