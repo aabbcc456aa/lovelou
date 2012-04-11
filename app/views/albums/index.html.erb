@@ -1,16 +1,61 @@
- <%= render "page_nav" %>
+<ul class="page-header breadcrumb menu clearfix">
+  <li class="first last active">
+    <a href="/albums">相册</a>
+  </li>
+</ul>
 
 <div class="sidebar">
   <div class="box">
     <h2><%= t("users.already_have_account")%></h2>
     <p style="line-height:20px;">
-      <%#= render :partial => "devise/shared/links" %>
+<%#= render :partial => "devise/shared/links" %>
     </p>
   </div>
 </div>
 
 <div class="content">
   <div class="box">
-    <%= link_to "我的相册" ,albums_path() %>
+    <%= link_to "我的相册" ,albums_path() , :class => "btn primary"%>
+    <%= link_to "好友相册" ,albums_path() , :class => "btn primary"%>
+    <%= link_to "最近上传" ,albums_path() , :class => "btn primary"%>
+    <%= link_to "热门相册" ,albums_path() , :class => "btn primary"%>
+    <%= link_to "新建相册" ,new_album_path(), :remote => true %>
+  </div>
+  
+  <div>
+    <% @albums.each do |album| %>
+      <div class="list_album">
+        <% if album.photos.size == 0 %>
+           <%= image_tag "/assets/no_photo_s.png" %>
+         <% elsif album.front_photo_id.blank? %>
+            <%= image_tag album.first_photo %>
+        <% else %>
+            <%= image_tag album.front_photo %>
+        <% end %>
+        <%= album.name %>
+      </div>
+    <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
+
+<!-- 新建相册 dialog 使用 -->
+<div id="dialog_form" style="display :none">
+</div>
+
+<style>
+  .list_album{
+    float:left;
+    height: 120px;
+    margin-bottom: 7px;
+    padding: 10px 15px 10px 10px;
+    text-align: center;
+    width: 110px;
+}
+</style>

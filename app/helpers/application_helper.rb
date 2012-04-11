@@ -1,5 +1,6 @@
+#encoding : utf-8
 module ApplicationHelper
-    def notice_message
+  def notice_message
     flash_messages = []
 
     flash.each do |type, message|
@@ -9,5 +10,13 @@ module ApplicationHelper
     end
 
     flash_messages.join("\n").html_safe
+  end
+  
+  def input_require
+    '&nbsp;&nbsp;<span class="label important"> 必填</span>'.html_safe
+  end
+  
+   def select_require
+    '&nbsp;&nbsp;<span class="label important"> 必选</span>'.html_safe
   end
 end

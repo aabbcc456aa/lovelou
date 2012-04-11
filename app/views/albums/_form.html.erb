@@ -1,22 +1,68 @@
+<div class="content">
+  <div class="box">
+    <%= form_for @album, :url => new_album_path, :html => {:method =>:post} ,:remote =>true do |f| %>
+      <fieldset>
+        <div id="error_messages"> <%= render "shared/error_messages", :target => @album %> </div>
+        <%= f.hidden_field :user_id, :value => current_user.try(:id) %>
+        <div class="clearfix"><%= f.label "相册名称:   " %>
+          <div class="input"><%= f.text_field :name %><%= input_require %>  </div>
+        </div>
+        <div class="clearfix"><%= f.label "相册描述: " %>
+          <div class="input"><%= f.text_area :description, :rows=>4 %> </div>
+        </div>
+        <div class="clearfix"><%= f.label "相册分类: " %>
+          <div class="input"><%= f.select :album_type, Common::ALBUM_TYPES,{ :prompt => "请选择" }%><%= select_require %>  </div>
+        </div>
+        <div class="clearfix"><%= f.label "相册权限: " %>
+          <div class="input"><%= f.select :permiss, Common::PERMISSES,{ :prompt => "请选择"} ,:onchange => "selectCase(this.id)"%><%= select_require %>  </div>
+        </div>
+        <div id="question_answer" style="display: none">
+          <div class="clearfix"> <%= f.label "问题: " %>
+            <div class="input">  
+               <%= f.text_field :question, :list=>"questions" %><%= input_require %>
+               <datalist id="questions">
+                <option value="我的学号是多少？">
+                <option value="我的手机号码是多少？">
+                <option value="我的家乡在哪里？">
+                <option value="我的爱人名字是多少？">
+                <option value="我的小学姓名是？">
+              </datalist>
+            </div>
+          </div>
+          <div class="clearfix"> <%= f.label "答案: " %>
+            <div class="input"> <%= f.text_field :answer  %><%= input_require %></div>
+          </div>
+        </div>
+        <div id="password" style="display: none">
+          <div class="clearfix"> <%= f.label "设置密码: " %>
+            <div class="input"><%= f.password_field :password %><%= input_require %> </div>
+          </div>
+          <div class="clearfix"> <%= f.label "密码确认: " %>
+            <div class="input"><%= f.password_field :password_confirmation %><%= input_require %> </div>
+          </div>
+        </div>
+        <div class="actions">
+          <%= f.submit "提交信息", :class => "btn primary" %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
 
-<%= form_for(@album) do |f| %>
-  <fieldset>
-    <legend>新建相册</legend>
-    <%= render "shared/error_messages", :target => @album %> 
-    <div class="clearfix"><%= f.label :name %>
-      <div class="inputs"><%= f.text_field :name , :required => true%></div>
-    </div>
-    <div class="clearfix"> <%= f.label :question %>
-      <div class="inputs"> <%= f.text_field :question , :required => true %> </div>
-    </div>
-    <div class="clearfix"> <%= f.label :answer %>
-      <div class="inputs"> <%= f.text_field :answer , :required => true %></div>
-    </div>
-    <div class="clearfix"> <%= f.label :password %>
-      <div class="inputs"><%= f.text_field :password , :required => true%> </div>
-    </div>
-    <div class="actions">
-      <%= f.submit "提交信息", :class => "btn primary" %>
-    </div>
-  </fieldset>
-<% end %>
+<script type="text/javascript">
+  function selectCase(obj_id){
+    var value = $('#'+ obj_id).val();
+    if(value==2){
+      $("#password").hide();
+      $("#question_answer").show();
+    }
+    else if(value == 3){
+      $("#question_answer").hide();
+      $("#password").show();
+    }
+    else{
+      $("#question_answer").hide();
+      $("#password").hide();
+    }
+  }
+</script>

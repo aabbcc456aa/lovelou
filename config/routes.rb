@@ -1,5 +1,9 @@
 Lovelou::Application.routes.draw do
-  resources :albums
+  resources :albums do
+    member do
+      post :new
+    end
+  end
 
   resources :photos
 

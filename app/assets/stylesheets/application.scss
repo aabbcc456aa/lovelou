@@ -8,8 +8,22 @@
  */
 
 
+/**/
+.page-header {
+    background: url("images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat-x scroll 50% 50% #5C9CCC;
+    border: 1px solid #4297D7;
+    color: #FFFFFF;
+    font-weight: bold;
+}
 
-
+ .btn .title{
+    background-color: #0064CD;
+    background-image: -moz-linear-gradient(center top , #049CDB, #0064CD);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
 /*  滑动导航 */
     .topbar div > ul a, .nav a {
