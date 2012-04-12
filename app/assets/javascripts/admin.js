@@ -15,12 +15,10 @@ $().ready(function() {
         spacing : 5  
     });  
 });  
-    
+
 
 $(function() {
   $('.alert-message .close').live('click', function(e){
     $(this).parent().slideUp('fast', function() {$(this).remove()});
   });
 })
-
-  

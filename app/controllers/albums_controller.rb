@@ -25,6 +25,20 @@ class AlbumsController < ApplicationController
   # GET /albums/new.json
   def new
     @album = Album.new(params[:album])
+    
+    respond_to do |format|
+      format.html {}
+      format.js {
+        if request.post?
+          @save_result = nil
+          if @album.save
+            @save_result = true
+          else
+            @save_result = false
+          end
+        end
+      }
+    end
   end
 
   # GET /albums/1/edit
