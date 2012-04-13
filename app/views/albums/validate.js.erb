@@ -1,0 +1,21 @@
+ <% @album.permiss == Common::NO_PERMISS %>
+    alert("sorry! 该相册为开放");
+ <% if @save_result == true  %>
+    alert("提交成功");
+    $("#dialog_form").dialog("close");
+    window.location.reload(); 
+  <% elsif @save_result == false %>
+      $("#error_messages").html('<%= escape_javascript render "shared/error_messages", :target => @album %>')
+ <% else %>
+      $("#dialog_form").html('<%= escape_javascript render :partial =>"validate" %>')
+      $("#dialog_form").dialog({
+      title: '请回答问题（主人设置了权限）' ,
+      height: 400,
+      width :300,
+      modal: true, 
+      overlay: { opacity: 0.5, background: "black" },
+      defaultBtn: "cancel",
+      content: $("#dialog_form"),
+      buttons: { "取消": function() { $(this).dialog("close"); } } 
+      })
+    <% end %>

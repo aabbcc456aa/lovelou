@@ -24,11 +24,27 @@ class PhotosController < ApplicationController
   # GET /photos/new
   # GET /photos/new.json
   def new
-    @photo = Photo.new
-
+    puts "#{request.post? == true}" 
+    @photo = Photo.new(params[:photo])
+    @album_id = request.post? ? "#{@photo.album_id}" : "#{params[:album_id] }"
     respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @photo }
+      format.html {
+          if @photo.save
+            redirect_to :controller => :albums, :action => :show, :id => @album_id
+          end
+      }
+      format.js { 
+        if request.post?
+          @photo.upload_person = current_user.try(:name)
+          @save_result = nil
+          if @photo.save
+            puts "jjjjjjjjjjjjjjjjd"
+            @save_result = true
+          else
+            @save_result = false
+          end
+        end
+      }
     end
   end
 
@@ -40,6 +56,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
+    puts "cccccccccccccccccccccccccccc"
     @photo = Photo.new(params[:photo])
 
     respond_to do |format|

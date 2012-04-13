@@ -24,7 +24,8 @@ gem 'therubyracer'
 #
 gem 'mini_magick'
 gem 'carrierwave'
-
+#per_page
+gem 'kaminari'
 
 gem 'jquery-rails'
 

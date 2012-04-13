@@ -1,25 +1,44 @@
-<p id="notice"><%= notice %></p>
+<ul class="page-header breadcrumb menu clearfix">
+  <li class="first last active">
+    <a href="/albums">相册</a> > <%= link_to @album.name, album_path(@album) %>
+  </li>
+</ul>
 
-<p>
-  <b>Name:</b>
-  <%= @album.name %>
-</p>
+<div class="sidebar">
+  <div class="box">
+    <h2><%= t("users.already_have_account")%></h2>
+    <p style="line-height:20px;">
+<%#= render :partial => "devise/shared/links" %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <b>Question:</b>
-  <%= @album.question %>
-</p>
+<div class="content">
+  <div class="box">
+    <%= link_to "上传相片" , new_album_photo_path(@album), :remote => true, :class => "btn primary"%>
+    <%= link_to "删除相册" ,albums_path() %>
+    <%= link_to "设置封面" ,albums_path() %>
+    <%= link_to "修改相册" ,new_album_path() %>
+  </div>
+  
+  <div id="photo_list">
+    <% @photos.each do |photo| %>
+      <div class="list_album">
+        <a class="fancybox-thumbs" data-fancybox-group="thumb" href="<%= photo.url_url(:big) %>"><img src="<%=  photo.url_url(:thumb) %>" alt="<%= photo.name %>" /></a>
+            <%#= link_to image_tag(image_tag photo.url_url(:thumb),:alt => photo.name ),photo.url_url(:big), :class =>"fancybox-thumbs " %>
+      </div>
+    <% end %>
+    <%= paginate @photos, :theme => 'admin' %>
+  </div>
+  
+  <footer>
+      <div class="container">
+        <p>截止当前点击:<%= @album.hits || 0%> </p>
+      </div>
+    </footer>
+</div>
 
-<p>
-  <b>Answer:</b>
-  <%= @album.answer %>
-</p>
 
-<p>
-  <b>Password:</b>
-  <%= @album.password %>
-</p>
-
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<!-- 新建相册 dialog 使用 -->
+<div id="dialog_form" style="display :none">
+</div>

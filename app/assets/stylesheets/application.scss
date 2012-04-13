@@ -7,8 +7,17 @@
  *= require jquery-ui-1.8.18.custom
  */
 
+/*图片和相册排列*/
+  .list_album{
+    float:left;
+    height: 120px;
+    margin-bottom: 7px;
+    padding: 10px 15px 10px 10px;
+    text-align: center;
+    width: 110px;
+}
 
-/**/
+/*标题导航*/
 .page-header {
     background: url("images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat-x scroll 50% 50% #5C9CCC;
     border: 1px solid #4297D7;

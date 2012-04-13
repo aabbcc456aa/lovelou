@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="box">
+    <%= form_for @album, :url => new_album_path, :html => {:method =>:post} ,:remote =>true do |f| %>
+      <fieldset>
+        <div id="error_messages"> <%= render "shared/error_messages", :target => @album %> </div>
+        <div class="clearfix"><%= f.label "相册名称: " %>
+          <div class="input"><%= @album.name %>  </div>
+        </div>
+        <%  if @album.permiss == Common::QUESTION_PERMISS %>
+          <div class="clearfix"> <%= f.label "问题: " %>
+            <div class="input">  
+               <%= f.text_field :question, :list=>"questions" %>
+            </div>
+          </div>
+          <div class="clearfix"> <%= f.label "答案: " %>
+            <div class="input"> <%= f.text_field :answer  %><%= input_require %></div>
+          </div>
+         <% elsif  @ALBUM.permiss == Common::PASS_PERMISS %>
+        
+          <div class="clearfix"> <%= f.label "设置密码: " %>
+            <div class="input"><%= f.password_field :password %><%= input_require %> </div>
+          </div>
+          <div class="clearfix"> <%= f.label "密码确认: " %>
+            <div class="input"><%= f.password_field :password_confirmation %><%= input_require %> </div>
+          </div>
+        <% end %>
+        <div class="actions">
+          <%= f.submit "提交信息", :class => "btn primary" %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

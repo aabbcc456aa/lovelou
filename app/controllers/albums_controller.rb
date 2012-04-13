@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
-#    @albums = current_user.albums
+    #    @albums = current_user.albums
     @albums = Album.all
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,8 @@ class AlbumsController < ApplicationController
   # GET /albums/1.json
   def show
     @album = Album.find(params[:id])
+    @album.hit
+    @photos = @album.photos.page(params[:page]).per(APP_CONFIG[:per_page])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -87,6 +89,22 @@ class AlbumsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to albums_url }
       format.json { head :ok }
+    end
+  end
+  
+  def validate
+    @album = Album.find(params[:id])
+    respond_to do |format|
+      format.js{
+        if request.post?
+          @save_result = nil
+          if @album.save
+            @save_result = true
+          else
+            @save_result = false
+          end
+        end
+      }
     end
   end
 end

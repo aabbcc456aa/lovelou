@@ -1,20 +1,29 @@
 Lovelou::Application.routes.draw do
   resources :albums do
+    resources :photos do
+      member do
+        post :new
+      end
+    end
     member do
       post :new
     end
   end
 
-  resources :photos
+  resources :photos do
+    member do
+      post :new
+    end
+  end
 
   devise_for :users, :path => "users", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
 
 
   get "home/index"
   root :to => "home#index"
-#    match 'login' => 'devises#new', :as => :login
-#  match 'logout' => "user_sessions#destroy", :as => :logout
-#  match 'login' => 'users#login', :as => :login
+  #    match 'login' => 'devises#new', :as => :login
+  #  match 'logout' => "user_sessions#destroy", :as => :logout
+  #  match 'login' => 'users#login', :as => :login
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

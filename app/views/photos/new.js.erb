@@ -1,0 +1,25 @@
+ alert("aa");
+ <% if @save_result == true  %>
+    alert("提交成功");
+    $("#dialog_form").dialog("close");
+    alert("dddd");
+    <%#*var r=confirm("是否刷新主页查看更新!");%>
+    <%#*if (r==false)%>
+      <%#*{%>
+      <%#*window.location.reload();%> 
+    <%#*}%>
+  <% elsif @save_result == false %>
+      $("#error_messages").html('<%= escape_javascript render "shared/error_messages", :target => @photo %>')
+ <% else %>
+      $("#dialog_form").html('<%= escape_javascript render :partial =>"form" %>')
+      $("#dialog_form").dialog({
+      title: '上传照片' ,
+      height: 600,
+      width :600,
+      modal: true, 
+      overlay: { opacity: 0.5, background: "black" },
+      defaultBtn: "cancel",
+      content: $("#dialog_form"),
+      buttons: { "取消": function() { $(this).dialog("close"); } } 
+      })
+    <% end %>
