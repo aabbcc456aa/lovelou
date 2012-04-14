@@ -1,32 +1,26 @@
 <div class="content">
   <div class="box">
-    <%= form_for @album, :url => new_album_path, :html => {:method =>:post} ,:remote =>true do |f| %>
+    <%= form_tag(validate_album_path, :remote =>true, :method =>:post)  do %>
+    <%= hidden_field_tag :id , @id %>
       <fieldset>
-        <div id="error_messages"> <%= render "shared/error_messages", :target => @album %> </div>
-        <div class="clearfix"><%= f.label "相册名称: " %>
-          <div class="input"><%= @album.name %>  </div>
-        </div>
+        <div id="error_messages" style="color: red">  </div>
         <%  if @album.permiss == Common::QUESTION_PERMISS %>
-          <div class="clearfix"> <%= f.label "问题: " %>
-            <div class="input">  
-               <%= f.text_field :question, :list=>"questions" %>
+        <div class="clearfix"> <label>问题: </label>
+            <div class="input">
+               <%= @album.question %>
             </div>
           </div>
-          <div class="clearfix"> <%= f.label "答案: " %>
-            <div class="input"> <%= f.text_field :answer  %><%= input_require %></div>
+        <div class="clearfix"> <label>答案: </label>
+            <div class="input"> <%= text_field_tag :answer  %></div>
           </div>
-         <% elsif  @ALBUM.permiss == Common::PASS_PERMISS %>
-        
-          <div class="clearfix"> <%= f.label "设置密码: " %>
-            <div class="input"><%= f.password_field :password %><%= input_require %> </div>
-          </div>
-          <div class="clearfix"> <%= f.label "密码确认: " %>
-            <div class="input"><%= f.password_field :password_confirmation %><%= input_require %> </div>
+         <% elsif  @album.permiss == Common::PASS_PERMISS %>
+           <div class="clearfix"> <label>请输入密码: </label>
+            <div class="input"><%= password_field_tag :password %> </div>
           </div>
         <% end %>
-        <div class="actions">
-          <%= f.submit "提交信息", :class => "btn primary" %>
-        </div>
+        <div class="clearfix"> <label></label>
+          <div class="input"> <%= submit_tag "提交", :class => "btn primary" %></div>
+          </div>
       </fieldset>
     <% end %>
   </div>

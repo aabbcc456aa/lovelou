@@ -20,25 +20,75 @@
     <%= link_to "设置封面" ,albums_path() %>
     <%= link_to "修改相册" ,new_album_path() %>
   </div>
-  
+
   <div id="photo_list">
     <% @photos.each do |photo| %>
       <div class="list_album">
         <a class="fancybox-thumbs" data-fancybox-group="thumb" href="<%= photo.url_url(:big) %>"><img src="<%=  photo.url_url(:thumb) %>" alt="<%= photo.name %>" /></a>
-            <%#= link_to image_tag(image_tag photo.url_url(:thumb),:alt => photo.name ),photo.url_url(:big), :class =>"fancybox-thumbs " %>
+        <%= photo.name %>
+  <%#= link_to image_tag(image_tag photo.url_url(:thumb),:alt => photo.name ),photo.url_url(:big), :class =>"fancybox-thumbs " %>
       </div>
     <% end %>
     <%= paginate @photos, :theme => 'admin' %>
   </div>
-  
-  <footer>
-      <div class="container">
-        <p>截止当前点击:<%= @album.hits || 0%> </p>
-      </div>
-    </footer>
+
 </div>
 
-
+<footer>
+  <div style="valign:bottom">
+    <p>截止当前点击:<%= @album.hits || 0%> </p>
+  </div>
+</footer>
 <!-- 新建相册 dialog 使用 -->
 <div id="dialog_form" style="display :none">
 </div>
+
+
+<style>
+  .list_album{
+    float:left;
+    height: 150px;
+    margin-bottom: 7px;
+    padding: 10px 15px 10px 10px;
+    text-align: center;
+    width: 160px;
+
+  }
+  .list_album  img{
+    height : 140px;
+    width : 155px;
+  }
+</style>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.fancybox-thumbs').fancybox({
+      prevEffect : 'none',
+      nextEffect : 'none',
+
+      closeBtn  : false,
+      arrows    : false,
+      nextClick : true,
+      title : {
+        type : 'inside'
+      },
+
+      helpers : {
+        thumbs : {
+          width  : 50,
+          height : 50
+        }
+      },
+      afterLoad : function() {
+        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' --- ' + this.title : '');
+      }
+    });
+
+  });
+</script>
+<style type="text/css">
+  .fancybox-custom .fancybox-outer {
+    box-shadow: 0 0 50px #222;
+  }
+</style>

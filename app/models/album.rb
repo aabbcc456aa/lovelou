@@ -1,8 +1,6 @@
 class Album < ActiveRecord::Base
   has_many :photos
  
-  
-  
   attr_accessor :password_confirmation
 
   validates :name, :album_type, :permiss, :presence => true
