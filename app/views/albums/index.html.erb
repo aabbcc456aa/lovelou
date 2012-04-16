@@ -24,11 +24,10 @@
   
   <div>
     <% @albums.each do |album| %>
+    <div id="out_list_ablum">
       <div class="list_album">
-         <% if album.permiss == Common::NO_PERMISS %>
-           <%= link_to_function image_tag("/assets/need_pass.png"), "alert('sorry! 该相册为开放')"  %>
-        <% elsif album.permiss == Common::QUESTION_PERMISS || album.permiss == Common::PASS_PERMISS %>
-           <%= link_to image_tag("/assets/need_pass.png"),validate_album_path(album)  %>
+        <% if album.permiss == Common::QUESTION_PERMISS || album.permiss == Common::PASS_PERMISS %>
+           <%= link_to image_tag("/assets/need_pass.png"),validate_album_path(album) ,:remote => true  %>
         <% elsif album.photos.size == 0 %>
            <%= link_to image_tag("/assets/no_photo_s.png"),album_path(album)  %>
          <% elsif album.front_photo_id.blank? %>
@@ -36,7 +35,10 @@
         <% else %>
             <%= link_to image_tag(album.front_photo),album_path(album) %>
         <% end %>
-        <%= album.name %>
+        <div id="album_name"><%= album.name %></div>
+        <div>共<%= album.photos.size %>张</div>
+        
+      </div>
       </div>
     <% end %>
   </div>
@@ -50,17 +52,25 @@
 
 
 <style>
+  #album_name{
+    padding-top: 5px;
+}
+  #out_list_ablum{
+    float: left;
+    width: 175px;
+    heigh: 195px;
+}
   .list_album{
     float:left;
-    height: 120px;
-    margin-bottom: 7px;
-    padding: 10px 15px 10px 10px;
+    height: 140px;
+    padding: 7px 5px 5px 5px;
     text-align: center;
-    width: 110px;
+    width: 140px;
+    border: #909090 1px solid;
     
 }
 .list_album  img{
-  height : 100px;
-  width : 100px;
+  height : 135px;
+  width : 135px;
 }
 </style>

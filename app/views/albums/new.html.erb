@@ -1,5 +1,122 @@
-<h1>New album</h1>
+<script type="text/javascript">
+  $(function() {
+    $('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+    $('img.image1').data('ad-title', 'Title through $.data');
+    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+    var galleries = $('.ad-gallery').adGallery();
+    $('#switch-effect').change(
+    function() {
+      galleries[0].settings.effect = $(this).val();
+      return false;
+    }
+  );
+    $('#toggle-slideshow').click(
+    function() {
+      galleries[0].slideshow.toggle();
+      return false;
+    }
+  );
+  });
+</script>
 
-<%= render 'form' %>
+<style type="text/css">
+  * {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif;
+    color: #333;
+    line-height: 140%;
+  }
+  select, input, textarea {
+    font-size: 1em;
+  }
+  body {
+    padding: 30px;
+    font-size: 70%;
+    width: 800px;
+  }
+  h2 {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+    padding: 0;
+    border-bottom: 1px dotted #dedede;
+  }
+  h3 {
+    margin-top: 1.2em;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .example {
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+  }
+  ul {
+    list-style-image:url(list-style.gif);
+  }
+  pre {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    border: 1px solid #CCC;
+    background: #f2f2f2;
+    padding: 10px;
+  }
+  code {
+    font-family: "Lucida Console", "Courier New", Verdana;
+    margin: 0;
+    padding: 0;
+  }
 
-<%= link_to 'Back', albums_path %>
+  #gallery {
+    padding: 30px;
+    background: #e1eef5;
+  }
+</style>
+
+<div id="container">
+  <div id="gallery" class="ad-gallery">
+    <div class="ad-controls">
+    </div>
+    <div class="ad-nav">
+      <div class="ad-thumbs">
+        <ul class="ad-thumb-list">
+          <li>
+            <a href="/assets/1_b.jpg">
+              <img src="/assets/1_s.jpg" class="image0">
+            </a>
+          </li>
+          <li>
+            <a href="/assets/2_b.jpg">
+              <img src="/assets/2_s.jpg" title="A title for 10_b.jpg" longdesc="This is a nice, and incredibly descriptive, description of the image 10_b.jpg" class="image1">
+            </a>
+          </li>
+          <li>
+            <a href="/assets/3_b.jpg">
+              <img src="/assets/3_s.jpg" title="A title for 11_b.jpg" longdesc="This is a nice, and incredibly descriptive, description of the image 11_b.jpg" class="image2">
+            </a>
+          </li>
+          <li>
+            <a href="/assets/4_b.jpg">
+              <img src="/assets/4_s.jpg" title="A title for 12_b.jpg" longdesc="This is a nice, and incredibly descriptive, description of the image 12_b.jpg" class="image3">
+            </a>
+          </li>
+          <li>
+            <a href="/assets/5_b.jpg">
+              <img src="/assets/5_s.jpg" title="A title for 13_b.jpg" longdesc="This is a nice, and incredibly descriptive, description of the image 13_b.jpg" class="image4">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="ad-image-wrapper">
+    </div>
+    
+    <div id="reply">
+      <div id="old_reply"></div>
+      <div id="now_reply">
+        <%= form_tag new_reply_path do%>
+        回复：
+        <%= text_area_tag :content %>
+        <%= submit_tag "提交", :class =>'btn button' %>
+        <% end %>
+      </div>
+    </div>
+  </div>

@@ -16,15 +16,17 @@ ActiveRecord::Schema.define(:version => 20120411053230) do
   create_table "albums", :force => true do |t|
     t.integer  "user_id"
     t.string   "name"
+    t.string   "descript"
     t.string   "question"
-    t.integer  "permiss",     :default => 0
+    t.integer  "permiss",        :default => 0
     t.string   "answer"
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
     t.integer  "album_type"
-    t.integer  "count"
+    t.integer  "hits",           :default => 0
+    t.integer  "front_photo_id"
   end
 
   create_table "photos", :force => true do |t|

@@ -33,6 +33,7 @@ images/ui-icons_f9bd01_256x240.png: images/ui-icons_f9bd01_256x240-abb5143e6912a
 jquery.gif: jquery-32a65a849b6a5afd7332d1bbb387e84a.gif
 kwicks.gif: kwicks-ddb28a8544f742c8e2b4a6e438bff09c.gif
 meet.gif: meet-1ace6ef7f21c073333857f15f2fc7911.gif
+need_pass.png: need_pass-10a0464b463463358a2848c7965b4fb6.png
 no_photo_s.png: no_photo_s-fefcf54c5fa3110e9e194a74d1636cbb.png
 rails.png: rails-e4b51606cd77fda2615e7439907bfc92.png
 ui-bg_diagonals-thick_18_b81900_40x40.png: ui-bg_diagonals-thick_18_b81900_40x40-070728c175bb385436f052a1547cd294.png
@@ -49,5 +50,5 @@ ui-icons_228ef1_256x240.png: ui-icons_228ef1_256x240-c415e562a0fcb1754862031bdb3
 ui-icons_ef8c08_256x240.png: ui-icons_ef8c08_256x240-fdb2d5b9e05b835150e8a580c821abe2.png
 ui-icons_ffd27a_256x240.png: ui-icons_ffd27a_256x240-8a75c1e907b637f8d384a4940616e107.png
 ui-icons_ffffff_256x240.png: ui-icons_ffffff_256x240-47c682725bc49963b14b9afc06a9d4be.png
-application.js: application-f70ea99c33eb7e39eef1d70b75bb7506.js
-application.css: application-9c39dcc246b62a8ce2dd20a6ecfccbf4.css
+application.js: application-ca80b37246329bc6924d9825a412b639.js
+application.css: application-30afd00075f84c0f701ef03c7abb63c2.css

@@ -2,8 +2,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
-    #    @albums = current_user.albums
-    @albums = Album.all
+    @albums = Album.where("permiss != '#{Common::NO_PERMISS}'")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @albums }
@@ -94,11 +93,14 @@ class AlbumsController < ApplicationController
   
   def validate
     @album = Album.find(params[:id])
+    @id = params[:id]
     respond_to do |format|
       format.js{
         if request.post?
           @save_result = nil
-          if @album.save
+          if @album.permiss == Common::QUESTION_PERMISS && @album.answer == params[:answer]
+            @save_result = true
+          elsif @album.permiss == Common::PASS_PERMISS && @album.password == params[:password]
             @save_result = true
           else
             @save_result = false

@@ -1,0 +1,29 @@
+<h1>Listing replies</h1>
+
+<table>
+  <tr>
+    <th>Reply type</th>
+    <th>Reply user</th>
+    <th>Reply content</th>
+    <th>Subject</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @replies.each do |reply| %>
+  <tr>
+    <td><%= reply.reply_type %></td>
+    <td><%= reply.reply_user_id %></td>
+    <td><%= reply.reply_content %></td>
+    <td><%= reply.subject_id %></td>
+    <td><%= link_to 'Show', reply %></td>
+    <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
+    <td><%= link_to 'Destroy', reply, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reply', new_reply_path %>
