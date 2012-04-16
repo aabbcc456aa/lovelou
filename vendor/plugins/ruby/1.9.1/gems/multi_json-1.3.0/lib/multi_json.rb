@@ -1,0 +1,113 @@
+module MultiJson
+  class DecodeError < StandardError
+    attr_reader :data
+    def initialize(message, backtrace, data)
+      super(message)
+      self.set_backtrace(backtrace)
+      @data = data
+    end
+  end
+
+  module_function
+
+  @adapter = nil
+
+  REQUIREMENT_MAP = [
+    ["oj", :oj],
+    ["yajl", :yajl],
+    ["json", :json_gem],
+    ["json/pure", :json_pure]
+  ]
+
+  # The default adapter based on what you currently
+  # have loaded and installed. First checks to see
+  # if any adapters are already loaded, then checks
+  # to see which are installed if none are loaded.
+  def default_adapter
+    return :oj if defined?(::Oj)
+    return :yajl if defined?(::Yajl)
+    return :json_gem if defined?(::JSON)
+
+    REQUIREMENT_MAP.each do |(library, adapter)|
+      begin
+        require library
+        return adapter
+      rescue LoadError
+        next
+      end
+    end
+
+    Kernel.warn "[WARNING] MultiJson is using the default adapter (ok_json). We recommend loading a different JSON library to improve performance."
+    :ok_json
+  end
+
+  # TODO: Remove for 2.0 release (but no sooner)
+  def engine
+    Kernel.warn "#{Kernel.caller.first}: [DEPRECATION] MultiJson.engine is deprecated and will be removed in the next major version. Use MultiJson.adapter instead."
+    self.adapter
+  end
+
+  # Get the current adapter class.
+  def adapter
+    return @adapter if @adapter
+    self.use self.default_adapter
+    @adapter
+  end
+
+  # TODO: Remove for 2.0 release (but no sooner)
+  def adapter=(new_adapter)
+    Kernel.warn "#{Kernel.caller.first}: [DEPRECATION] MultiJson.adapter= is deprecated and will be removed in the next major version. Use MultiJson.use instead."
+    self.use(new_adapter)
+  end
+
+  # Set the JSON parser utilizing a symbol, string, or class.
+  # Supported by default are:
+  #
+  # * <tt>:oj</tt>
+  # * <tt>:json_gem</tt>
+  # * <tt>:json_pure</tt>
+  # * <tt>:ok_json</tt>
+  # * <tt>:yajl</tt>
+  # * <tt>:nsjsonserialization</tt> (MacRuby only)
+  def use(new_adapter)
+    case new_adapter
+    when String, Symbol
+      require "multi_json/adapters/#{new_adapter}"
+      @adapter = MultiJson::Adapters.const_get("#{new_adapter.to_s.split('_').map{|s| s.capitalize}.join('')}")
+    when NilClass
+      @adapter = nil
+    when Class
+      @adapter = new_adapter
+    else
+      raise "Did not recognize your adapter specification. Please specify either a symbol or a class."
+    end
+  end
+
+  # TODO: Remove for 2.0 release (but no sooner)
+  def decode(string, options={})
+    Kernel.warn "#{Kernel.caller.first}: [DEPRECATION] MultiJson.decode is deprecated and will be removed in the next major version. Use MultiJson.load instead."
+    self.load(string, options)
+  end
+
+  # Decode a JSON string into Ruby.
+  #
+  # <b>Options</b>
+  #
+  # <tt>:symbolize_keys</tt> :: If true, will use symbols instead of strings for the keys.
+  def load(string, options={})
+    adapter.load(string, options)
+  rescue adapter::ParseError => exception
+    raise DecodeError.new(exception.message, exception.backtrace, string)
+  end
+
+  # TODO: Remove for 2.0 release (but no sooner)
+  def encode(object, options={})
+    Kernel.warn "#{Kernel.caller.first}: [DEPRECATION] MultiJson.encode is deprecated and will be removed in the next major version. Use MultiJson.dump instead."
+    self.dump(object, options)
+  end
+
+  # Encodes a Ruby object as JSON.
+  def dump(object, options={})
+    adapter.dump(object, options)
+  end
+end
