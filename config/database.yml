@@ -28,7 +28,7 @@ test:
   database: lovelou_test
   pool: 5
   username: root
-  password: root
+  password: admin
   socket: /var/run/mysqld/mysqld.sock
 
 production:

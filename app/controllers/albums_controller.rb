@@ -91,6 +91,22 @@ class AlbumsController < ApplicationController
     end
   end
   
+  def reply
+    
+  end
+  
+  def select_photo
+    @id = params[:id]
+#    @photo = Photo.find(@id)
+#    @pre_id = @photo.pre_record_id.try(:id)
+#    @next_id = @photo.next_record_id.try(:id)
+#    @old_replies = Reply.where(:id => @id)
+    respond_to do |format|
+      format.js{
+      }
+    end
+  end
+  
   def validate
     @album = Album.find(params[:id])
     @id = params[:id]
