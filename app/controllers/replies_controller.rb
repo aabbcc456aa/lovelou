@@ -25,10 +25,16 @@ class RepliesController < ApplicationController
   # GET /replies/new.json
   def new
     @reply = Reply.new
-
+    @reply.reply_content = params[:content]
+    @reply.subject_id = params[:id]
+    @reply.reply_type = 'photo'
+    @reply.reply_user_id = current_user.try(:id)
+    @reply.save
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @reply }
+      format.js { 
+        
+      }
     end
   end
 
