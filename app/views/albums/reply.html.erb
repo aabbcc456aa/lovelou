@@ -1,111 +1,169 @@
-<%= render "reply" %>
-</br>
-<div id="gallery" class="ad-gallery">
-  <div class="ad-controls"></div>
-  <div class="ad-nav">
-    <div class="ad-thumbs">
-      <ul class="ad-thumb-list">
+<ul class="page-header breadcrumb menu clearfix">
+  <li class="first last active">
+    <a href="/albums">相册</a> > <%= link_to @album.name, album_path(@album) %>
+  </li>
+</ul>
 
-        <li>
-          <a href="/assets/2_b.jpg">
-            <img src="/assets/2_s.jpg" id ="6" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/3_b.jpg">
-            <img src="/assets/3_s.jpg" id="2"  class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/4_b.jpg">
-            <img src="/assets/4_s.jpg"  id="3" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/5_b.jpg">
-            <img src="/assets/5_s.jpg" id="4" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/1_b.jpg">
-            <img src="/assets/1_s.jpg" id="5" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/1_b.jpg">
-            <img src="/assets/1_s.jpg" id="11" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/2_b.jpg">
-            <img src="/assets/2_s.jpg" id ="61" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/3_b.jpg">
-            <img src="/assets/3_s.jpg" id="21"  class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/4_b.jpg">
-            <img src="/assets/4_s.jpg"  id="31" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/5_b.jpg">
-            <img src="/assets/5_s.jpg" id="41" class="image">
-          </a>
-        </li>
-        <li>
-          <a href="/assets/1_b.jpg">
-            <img src="/assets/1_s.jpg" id="51" class="image">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div><br>
-  <div class="ad-image-wrapper"></div>
-</div>
-
-<div class="content" id="reply" style="valign :center;align :center">
+<div class="sidebar">
   <div class="box">
-  <div id="old_reply">
-    <% render :partial => "old_reply" %>
-  </div>
-  <div id="now_reply">
-    <%= form_tag "/replies/1/edit" , :name =>"form" do %>
-      回复：
-      <%= text_area_tag :content, nil, :onkeyup => 'jude_button()' %>
-      <%= submit_tag "提交", :class =>'btn button' , :id => 'button',:disabled =>"disabled" %>
-    <% end %>
-  </div>
+    <h2><%= t("users.already_have_account")%></h2>
+    <p style="line-height:20px;">
+<%#= render :partial => "devise/shared/links" %>
+    </p>
   </div>
 </div>
 
+<div class="content">
+  <div class="box">
+    <%= link_to "上传相片" , new_album_photo_path(@album), :remote => true, :class => "btn primary"%>
+    <%= link_to "删除相册" ,albums_path() %>
+    <%= link_to "设置封面" ,albums_path() %>
+    <%= link_to "修改相册" ,new_album_path() %>
+  </div>
 
-<div id="hidden" style="display: none">
-  <%= link_to "更新",select_photo_album_path(:id => 2) ,:remote => true, :id =>'remote_form' %>
+
+  <div id="gallery" class="ad-gallery">
+    <div class="ad-controls"></div>
+    <div class="ad-nav">
+      <div class="ad-thumbs">
+        <ul class="ad-thumb-list">
+          <% @photos.each do |photo| %>
+            <li>
+              <a href="<%=  photo.url_url(:big) %>">
+                <img src="<%=  photo.url_url(:thumb)%>" id ="<%= photo.id %>" class="image"/>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+        <br>
+        <div class="ad-image-wrapper"></div>
+
+        <script type="text/javascript" src="http://s.shareto.com.cn/js/shareto_button.js" charset="utf-8"></script>
+        <!-- ShareTo Button END -->
+
+      </div>
+      <!-- 评论区-->
+      <div class="content" id="reply" style="valign :center;align :center">
+        <div class="box">
+          <div id="old_replies"  class="box"><%= render :partial => "old_replies" ,:locals =>{:old_replies =>@old_replies}  %></div>
+          <div id="now_reply">
+            <%= form_tag "/albums/{@first_photo.try(:id)||1}/commit_reply" , :name =>"form", :remote => true do %>
+              回复：
+              <%= text_area_tag :content, nil, :onkeyup => 'jude_button()' %>
+              <%= submit_tag "提交", :class =>'btn button' , :id => 'button',:disabled =>"disabled" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="hidden" style="display: none">
+        <%= link_to "加载图片评论",select_photo_album_path(:id => '1') ,:remote => true, :id =>'remote_form' %>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="valign:bottom">
+      <p>截止当前点击:<%= @album.hits || 0%> </p>
+    </div>
+  </footer>
+
+
+
+<!-- 新建相册 dialog 使用 -->
+<div id="dialog_form" style="display :none">
 </div>
-<script type="text/javascript">
- function jude_button(){
-   alert("no null");
-   var content = $("#content").val();
-   if(content != "" && content != null){
-     $("#button").attr("disabled",false);
-   }
-   else{
-      $("#button").attr("disabled","disabled");
-   }
- }
+
+  <%= render "reply" %>
+<%#*<br>%>
+<%#*<div id="gallery" class="ad-gallery">%>
+<%#*<div class="ad-controls"></div>%>
+<%#*<div class="ad-nav">%>
+<%#*<div class="ad-thumbs">%>
+<%#*<ul class="ad-thumb-list">%>
+
+<%#*<li>%>
+<%#*<a href="/assets/2_b.jpg">%>
+<%#*<img src="/assets/2_s.jpg" id ="6" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/3_b.jpg">%>
+<%#*<img src="/assets/3_s.jpg" id="2"  class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/4_b.jpg">%>
+<%#*<img src="/assets/4_s.jpg"  id="3" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/5_b.jpg">%>
+<%#*<img src="/assets/5_s.jpg" id="4" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/1_b.jpg">%>
+<%#*<img src="/assets/1_s.jpg" id="5" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/1_b.jpg">%>
+<%#*<img src="/assets/1_s.jpg" id="11" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/2_b.jpg">%>
+<%#*<img src="/assets/2_s.jpg" id ="61" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/3_b.jpg">%>
+<%#*<img src="/assets/3_s.jpg" id="21"  class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/4_b.jpg">%>
+<%#*<img src="/assets/4_s.jpg"  id="31" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/5_b.jpg">%>
+<%#*<img src="/assets/5_s.jpg" id="41" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*<li>%>
+<%#*<a href="/assets/1_b.jpg">%>
+<%#*<img src="/assets/1_s.jpg" id="51" class="image"/>%>
+<%#*</a>%>
+<%#*</li>%>
+<%#*</ul>%>
+<%#*</div>%>
+<%#*</div><br>%>
+<%#*<div class="ad-image-wrapper"></div>%>
+<%#*</div>%>
+
+
+  <script type="text/javascript">
+    function jude_button(){
+      var content = $("#content").val();
+      if(content != "" && content != null){
+        $("#button").attr("disabled",false);
+      }
+      else{
+        $("#button").attr("disabled","disabled");
+      }
+    }
  
-  var image_index = "";
-  $(".image").click(
-  function() {
-    image_index = $(this).attr("id");
-    $("#remote_form");
-    document.form.action = "/replies/" + image_index + "/edit";
-    var remote_href = "/albums/" + image_index +"/select_photo"
-    $("#remote_form").attr("href",remote_href);
-    $("#remote_form").click();
-  })
-</script>
+    var image_index = "";
+    $(".image").click(
+    function() {
+      image_index = $(this).attr("id");
+      $("#remote_form");
+      document.form.action = "/albums/" + image_index + "/commit_reply";
+      var remote_href = "/albums/" + image_index +"/select_photo"
+      $("#remote_form").attr("href",remote_href);
+      $("#remote_form").click();
+    })
+  </script>

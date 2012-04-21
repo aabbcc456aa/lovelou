@@ -24,23 +24,12 @@ class RepliesController < ApplicationController
   # GET /replies/new
   # GET /replies/new.json
   def new
-    @reply = Reply.new
-    @reply.reply_content = params[:content]
-    @reply.subject_id = params[:id]
-    @reply.reply_type = 'photo'
-    @reply.reply_user_id = current_user.try(:id)
-    @reply.save
-    respond_to do |format|
-      format.html # new.html.erb
-      format.js { 
-        
-      }
-    end
+   
   end
 
   # GET /replies/1/edit
   def edit
-    @reply = Reply.find(params[:id])
+    
   end
 
   # POST /replies

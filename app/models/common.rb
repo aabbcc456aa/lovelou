@@ -15,5 +15,14 @@ class Common
   def self.get_album_type(key)
     ALBUM_TYPES.select{|t| break t[1] if value == key}
   end
-  
+
+
+  #回复种类
+  ALBUM_REPLY = 1
+  DAYLOG_REPLY =2
+  PHOTO_REPLY = 3
+  REPLY_TYPES = [["相册",1],["日志",2],["相片",3]]
+  def self.get_reply_type(key)
+    REPLY_TYPES.select{|t| break t[1] if value == key}
+  end
 end

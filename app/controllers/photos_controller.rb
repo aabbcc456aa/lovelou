@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
     respond_to do |format|
       format.html {
           if @photo.save
-            redirect_to :controller => :albums, :action => :show, :id => @album_id
+            redirect_to :controller => :albums, :action => :reply, :id => @album_id
           end
       }
       format.js { 

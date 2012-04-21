@@ -11,6 +11,7 @@ Lovelou::Application.routes.draw do
       get :validate
       post :validate
       post :new
+      post :commit_reply
     end
     
     resources :photos do

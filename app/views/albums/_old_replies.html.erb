@@ -1,0 +1,12 @@
+<% if old_replies.blank? %>
+  <div class="no_result">
+    <%= "暂无回复" %>
+  </div>
+<% else %>
+  <% old_replies.each do |reply| %>
+    <div class="pull-left face">@<%= reply.try(:user).try(:name) %>:</div>
+    <div class="infos">
+      <%= reply.reply_content %>
+    </div>
+  <% end %>
+<% end %>

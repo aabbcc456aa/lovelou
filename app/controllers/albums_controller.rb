@@ -92,17 +92,40 @@ class AlbumsController < ApplicationController
   end
   
   def reply
-    
+    @album = Album.find(params[:id])
+    @album.hit
+    @photos = @album.photos#.page(params[:page]).per(APP_CONFIG[:per_page])
+    puts "========#{@photos.size}"
+    @first_photo = @photos.first
+    @old_replies = @first_photo.try(:replies)
   end
   
   def select_photo
-    @id = params[:id]
-#    @photo = Photo.find(@id)
-#    @pre_id = @photo.pre_record_id.try(:id)
-#    @next_id = @photo.next_record_id.try(:id)
-#    @old_replies = Reply.where(:id => @id)
+    #    @id = params[:id]
+    #    @photo = Photo.find(@id)
+    #    @pre_id = @photo.pre_record_id.try(:id)
+    #    @next_id = @photo.next_record_id.try(:id)
+    @old_replies = Reply.find_all_by_reply_type_and_subject_id(Common::PHOTO_REPLY,params[:id])
+    puts @old_replies.size
     respond_to do |format|
       format.js{
+      }
+    end
+  end
+
+
+  def commit_reply
+    @reply = Reply.new
+    @reply.reply_content = params[:content]
+    @reply.subject_id = params[:id]
+    @reply.reply_type = Common::PHOTO_REPLY
+    @reply.reply_user_id = current_user.try(:id)
+    @reply.save
+    @old_replies = Reply.find_all_by_reply_type_and_subject_id(Common::PHOTO_REPLY,params[:id])
+    respond_to do |format|
+      format.html # new.html.erb
+      format.js {
+
       }
     end
   end
