@@ -1,10 +1,18 @@
 Lovelou::Application.routes.draw do
+  resources :replies
+
   resources :albums do
+#    collection do
+#      
+#    end
     member do
+      get :reply
+      get :select_photo
       get :validate
       post :validate
-       post :new
+      post :new
     end
+    
     resources :photos do
       member do
         post :new

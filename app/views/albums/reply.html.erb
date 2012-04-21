@@ -1,0 +1,111 @@
+<%= render "reply" %>
+</br>
+<div id="gallery" class="ad-gallery">
+  <div class="ad-controls"></div>
+  <div class="ad-nav">
+    <div class="ad-thumbs">
+      <ul class="ad-thumb-list">
+
+        <li>
+          <a href="/assets/2_b.jpg">
+            <img src="/assets/2_s.jpg" id ="6" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/3_b.jpg">
+            <img src="/assets/3_s.jpg" id="2"  class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/4_b.jpg">
+            <img src="/assets/4_s.jpg"  id="3" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/5_b.jpg">
+            <img src="/assets/5_s.jpg" id="4" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/1_b.jpg">
+            <img src="/assets/1_s.jpg" id="5" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/1_b.jpg">
+            <img src="/assets/1_s.jpg" id="11" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/2_b.jpg">
+            <img src="/assets/2_s.jpg" id ="61" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/3_b.jpg">
+            <img src="/assets/3_s.jpg" id="21"  class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/4_b.jpg">
+            <img src="/assets/4_s.jpg"  id="31" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/5_b.jpg">
+            <img src="/assets/5_s.jpg" id="41" class="image">
+          </a>
+        </li>
+        <li>
+          <a href="/assets/1_b.jpg">
+            <img src="/assets/1_s.jpg" id="51" class="image">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div><br>
+  <div class="ad-image-wrapper"></div>
+</div>
+
+<div class="content" id="reply" style="valign :center;align :center">
+  <div class="box">
+  <div id="old_reply">
+    <% render :partial => "old_reply" %>
+  </div>
+  <div id="now_reply">
+    <%= form_tag "/replies/1/edit" , :name =>"form" do %>
+      回复：
+      <%= text_area_tag :content, nil, :onkeyup => 'jude_button()' %>
+      <%= submit_tag "提交", :class =>'btn button' , :id => 'button',:disabled =>"disabled" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+<div id="hidden" style="display: none">
+  <%= link_to "更新",select_photo_album_path(:id => 2) ,:remote => true, :id =>'remote_form' %>
+</div>
+<script type="text/javascript">
+ function jude_button(){
+   alert("no null");
+   var content = $("#content").val();
+   if(content != "" && content != null){
+     $("#button").attr("disabled",false);
+   }
+   else{
+      $("#button").attr("disabled","disabled");
+   }
+ }
+ 
+  var image_index = "";
+  $(".image").click(
+  function() {
+    image_index = $(this).attr("id");
+    $("#remote_form");
+    document.form.action = "/replies/" + image_index + "/edit";
+    var remote_href = "/albums/" + image_index +"/select_photo"
+    $("#remote_form").attr("href",remote_href);
+    $("#remote_form").click();
+  })
+</script>

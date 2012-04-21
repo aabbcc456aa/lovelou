@@ -26,7 +26,6 @@
       <div class="list_album">
         <a class="fancybox-thumbs" data-fancybox-group="thumb" href="<%= photo.url_url(:big) %>"><img src="<%=  photo.url_url(:thumb) %>" alt="<%= photo.name %>" /></a>
         <%= photo.name %>
-  <%#= link_to image_tag(image_tag photo.url_url(:thumb),:alt => photo.name ),photo.url_url(:big), :class =>"fancybox-thumbs " %>
       </div>
     <% end %>
     <%= paginate @photos, :theme => 'admin' %>

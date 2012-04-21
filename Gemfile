@@ -30,9 +30,7 @@ gem 'kaminari'
 gem 'jquery-rails'
 
 # added 
-gem 'spreadsheet'
 gem 'nifty-generators'
-gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 gem 'simple_form'
 gem 'client_side_validations'

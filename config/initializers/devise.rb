@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "huxiaolong100@126.com"
+  config.mailer_sender = "csdn_csdn_csdn@126.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -38,10 +38,10 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [ :login ]
-  config.authentication_keys = [ :login ]
+  config.case_insensitive_keys = [ :email ]
+  config.authentication_keys = [ :email ]
 
-   config.stretches = 10
+  config.stretches = 10
 
   config.pepper = "c7d4ed7d1ea1a7fee16e8a7ef80ca1d391fc3bb8e79a2da9ca23a68dc5c82e6cf3715a6f3d8369335372ab8be36a526bc2e778f17075ed241a1c14c5b93eea60"
 
@@ -67,4 +67,13 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+#  config.omniauth "qq", "801131451", "f92a72cd8db68f0689d911c049eb7879"
+#  config.omniauth :tsohu, "Wh6FTBDSPum7N9Nrin6B","%ENKAl*jPQzrN0Mg1p7MBQzLUdA!pJb^nj*^VR)%"
+#  config.omniauth :t163, "5HpV55umNP9dC3lp","kArPo1wsgA7Ch4PpoBVqU9QJcoy1iUjA"
+#  config.omniauth :tqq, "801131451", "f92a72cd8db68f0689d911c049eb7879"
+#  config.omniauth :sina, "898403372", "9bb01bfbff92e41e2bcf76e904f601a5"
+#  config.omniauth :douban, "0de51c562d83665129af5502888a32f3", "e3120947ae3eab9d"
+  #   config.omniauth :renren, "81f0474b0be54c9f8dbbe4d452a45f45","f768d334b7d14c17ad09bc6dbaa6dc6c"
 end
+
+

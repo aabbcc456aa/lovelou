@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reply_type: 1
+  reply_user_id: MyString
+  reply_content: MyString
+  subject_id: 1
+
+two:
+  reply_type: 1
+  reply_user_id: MyString
+  reply_content: MyString
+  subject_id: 1
