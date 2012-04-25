@@ -1,6 +1,10 @@
  <% if @save_result == true  %>
   $("#dialog_form").dialog("close");
+  <% if @show_type == "reply" %>
+   window.location.href=  "albums/" +  <%= @album.id %> + "/reply"
+  <% else %>
     window.location.href=  "albums/" +  <%= @album.id %> 
+  <% end %>
  <% elsif @save_result == false  %>
     alert("回答错误，请重新填写");
  <% else %>

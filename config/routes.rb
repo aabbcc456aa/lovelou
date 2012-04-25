@@ -12,6 +12,7 @@ Lovelou::Application.routes.draw do
       post :validate
       post :new
       post :commit_reply
+#      get :per_ablum_show
     end
     
     resources :photos do

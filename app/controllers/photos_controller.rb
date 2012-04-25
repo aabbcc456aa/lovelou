@@ -29,16 +29,15 @@ class PhotosController < ApplicationController
     @album_id = request.post? ? "#{@photo.album_id}" : "#{params[:album_id] }"
     respond_to do |format|
       format.html {
-          if @photo.save
-            redirect_to :controller => :albums, :action => :reply, :id => @album_id
-          end
+        if @photo.save
+          redirect_to :controller => :albums, :action => :reply, :id => @album_id
+        end
       }
       format.js { 
         if request.post?
           @photo.upload_person = current_user.try(:name)
           @save_result = nil
           if @photo.save
-            puts "jjjjjjjjjjjjjjjjd"
             @save_result = true
           else
             @save_result = false

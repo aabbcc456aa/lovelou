@@ -2,6 +2,7 @@
   <div class="box">
     <%= form_tag(validate_album_path, :remote =>true, :method =>:post)  do %>
     <%= hidden_field_tag :id , @id %>
+    <%= hidden_field_tag :show_type, @show_type %>
       <fieldset>
         <div id="error_messages" style="color: red">  </div>
         <%  if @album.permiss == Common::QUESTION_PERMISS %>

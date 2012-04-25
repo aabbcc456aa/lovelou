@@ -34,40 +34,35 @@
               </a>
             </li>
           <% end %>
-        </ul>
-        <br>
-        <div class="ad-image-wrapper"></div>
-
-        <script type="text/javascript" src="http://s.shareto.com.cn/js/shareto_button.js" charset="utf-8"></script>
-        <!-- ShareTo Button END -->
-
+        </ul> 
       </div>
-      <!-- 评论区-->
-      <div class="content" id="reply" style="valign :center;align :center">
-        <div class="box">
-          <div id="old_replies"  class="box"><%= render :partial => "old_replies" ,:locals =>{:old_replies =>@old_replies}  %></div>
-          <div id="now_reply">
-            <%= form_tag "/albums/{@first_photo.try(:id)||1}/commit_reply" , :name =>"form", :remote => true do %>
-              回复：
-              <%= text_area_tag :content, nil, :onkeyup => 'jude_button()' %>
-              <%= submit_tag "提交", :class =>'btn button' , :id => 'button',:disabled =>"disabled" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-
-
-      <div id="hidden" style="display: none">
-        <%= link_to "加载图片评论",select_photo_album_path(:id => '1') ,:remote => true, :id =>'remote_form' %>
-      </div>
-    </div>
+    </div><br>
+    <div class="ad-image-wrapper"></div>
   </div>
+</div>
+<!-- 评论区-->
+<div class="content" id="reply" style="valign :center;align :center">
 
-  <footer>
-    <div style="valign:bottom">
-      <p>截止当前点击:<%= @album.hits || 0%> </p>
-    </div>
-  </footer>
+  <div id="old_replies"><%= render :partial => "old_replies" ,:locals =>{:old_replies =>@old_replies}  %></div>
+  <div id="now_reply"  class="box">
+    <%= form_tag "/albums/{@first_photo.try(:id)||1}/commit_reply" , :name =>"form", :remote => true do %>
+      回复：
+      <%= hidden_field_tag :reply_type, "photo" %>
+      <%= text_area_tag :content, nil,:cols => 80, :onkeyup => 'jude_button()' %>
+      <%= submit_tag "提交", :class =>'btn button' , :id => 'button', :disabled =>"disabled" , :style =>"valign:bottom" %>
+    <% end %>
+  </div>
+</div>
+
+<div id="hidden" style="display: none">
+  <%= link_to "加载图片评论",select_photo_album_path(:id => '1') ,:remote => true, :id =>'remote_form' %>
+</div>
+
+<footer>
+  <div style="valign:bottom">
+    <p>截止当前点击:<%= @album.hits || 0%> </p>
+  </div>
+</footer>
 
 
 
@@ -75,7 +70,7 @@
 <div id="dialog_form" style="display :none">
 </div>
 
-  <%= render "reply" %>
+<%= render "reply" %>
 <%#*<br>%>
 <%#*<div id="gallery" class="ad-gallery">%>
 <%#*<div class="ad-controls"></div>%>
@@ -145,25 +140,25 @@
 <%#*</div>%>
 
 
-  <script type="text/javascript">
-    function jude_button(){
-      var content = $("#content").val();
-      if(content != "" && content != null){
-        $("#button").attr("disabled",false);
-      }
-      else{
-        $("#button").attr("disabled","disabled");
-      }
+<script type="text/javascript">
+  function jude_button(){
+    var content = $("#content").val();
+    if(content != "" && content != null){
+      $("#button").attr("disabled",false);
     }
+    else{
+      $("#button").attr("disabled","disabled");
+    }
+  }
  
-    var image_index = "";
-    $(".image").click(
-    function() {
-      image_index = $(this).attr("id");
-      $("#remote_form");
-      document.form.action = "/albums/" + image_index + "/commit_reply";
-      var remote_href = "/albums/" + image_index +"/select_photo"
-      $("#remote_form").attr("href",remote_href);
-      $("#remote_form").click();
-    })
-  </script>
+  var image_index = "";
+  $(".image").click(
+  function() {
+    image_index = $(this).attr("id");
+    $("#remote_form");
+    document.form.action = "/albums/" + image_index + "/commit_reply";
+    var remote_href = "/albums/" + image_index +"/select_photo"
+    $("#remote_form").attr("href",remote_href);
+    $("#remote_form").click();
+  })
+</script>

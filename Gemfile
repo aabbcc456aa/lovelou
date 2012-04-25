@@ -8,6 +8,9 @@ gem 'thin'
 gem 'pg'
 gem 'mysql2'
 
+
+gem 'dropbox-sdk' 
+
 gem 'devise', '1.5.2'
 # Gems used only for assets and not required
 # in production environments by default.

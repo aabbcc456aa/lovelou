@@ -4,16 +4,9 @@
   </li>
 </ul>
 
-<div class="sidebar">
-  <div class="box">
-    <h2><%= t("users.already_have_account")%></h2>
-    <p style="line-height:20px;">
-<%#= render :partial => "devise/shared/links" %>
-    </p>
-  </div>
-</div>
 
-<div class="content">
+
+<dbiv class="content">
   <div class="box">
     <%= link_to "上传相片" , new_album_photo_path(@album), :remote => true, :class => "btn primary"%>
     <%= link_to "删除相册" ,albums_path() %>
@@ -30,11 +23,22 @@
     <% end %>
     <%= paginate @photos, :theme => 'admin' %>
   </div>
-
+</div>
+<!-- 评论区-->
+<div class="content" id="reply" style="valign :center;align :center">
+  <div id="old_replies"><%= render :partial => "old_replies" ,:locals =>{:old_replies =>@old_replies}  %></div>
+  <div id="now_reply"  class="box">
+    <%= form_tag "/albums/#{@album.id}/commit_reply" , :name =>"form", :remote => true do %>
+      评论：
+      <%= hidden_field_tag :reply_type, "ablum" %>
+      <%= text_area_tag :content, nil, :onkeyup => 'jude_button()' %>
+      <%= submit_tag "提交", :class =>'btn button' , :id => 'button',:disabled =>"disabled" %>
+    <% end %>
+  </div>
 </div>
 
 <footer>
-  <div style="valign:bottom">
+  <div style="valign:bottom; align:center">
     <p>截止当前点击:<%= @album.hits || 0%> </p>
   </div>
 </footer>
@@ -58,7 +62,17 @@
     width : 155px;
   }
 </style>
-
+<script type="text/javascript">
+  function jude_button(){
+    var content = $("#content").val();
+    if(content != "" && content != null){
+      $("#button").attr("disabled",false);
+    }
+    else{
+      $("#button").attr("disabled","disabled");
+    }
+  }
+</script>
 
 <script type="text/javascript">
   $(document).ready(function() {

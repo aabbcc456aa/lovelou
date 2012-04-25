@@ -41,7 +41,7 @@
     }
     .ad-gallery .ad-image-wrapper .ad-prev, .ad-gallery .ad-image-wrapper .ad-next {
       /* www.codefans.net */
-      background: url(non-existing.jpg)\9
+      background: url(non-existing.jpg)
     }
       .ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
         background: url(ad_prev.png);
