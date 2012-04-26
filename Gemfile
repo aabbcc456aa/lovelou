@@ -8,7 +8,7 @@ gem 'thin'
 gem 'pg'
 gem 'mysql2'
 
-
+gem 'fog'
 gem 'dropbox-sdk' 
 
 gem 'devise', '1.5.2'

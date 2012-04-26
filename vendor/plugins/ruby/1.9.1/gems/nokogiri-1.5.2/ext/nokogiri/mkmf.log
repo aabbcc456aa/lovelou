@@ -1,0 +1,362 @@
+find_header: checking for libxml/parser.h... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -E -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/parser.h>
+/* end */
+
+--------------------
+
+find_header: checking for libxslt/xslt.h... -------------------- yes
+
+"gcc -E -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxslt/xslt.h>
+/* end */
+
+--------------------
+
+find_header: checking for libexslt/exslt.h... -------------------- yes
+
+"gcc -E -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libexslt/exslt.h>
+/* end */
+
+--------------------
+
+have_func: checking for iconv_open() in iconv.h... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:7:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <iconv.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for xmlParseDoc() in -lxml2... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlParseDoc’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlParseDoc’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlParseDoc(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for xsltParseStylesheetDoc() in -lxslt... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xsltParseStylesheetDoc’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xsltParseStylesheetDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xsltParseStylesheetDoc’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xsltParseStylesheetDoc(); return 0; }
+/* end */
+
+--------------------
+
+find_library: checking for exsltFuncRegister() in -lexslt... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘exsltFuncRegister’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))exsltFuncRegister; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘exsltFuncRegister’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { exsltFuncRegister(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlHasFeature()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlHasFeature’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlHasFeature; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlHasFeature’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlHasFeature(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlFirstElementChild()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlFirstElementChild’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlFirstElementChild; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlFirstElementChild’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlFirstElementChild(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlRelaxNGSetParserStructuredErrors’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlRelaxNGSetParserStructuredErrors’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlRelaxNGSetParserStructuredErrors’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlRelaxNGSetParserStructuredErrors’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlRelaxNGSetValidStructuredErrors’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetValidStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlRelaxNGSetValidStructuredErrors’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlRelaxNGSetValidStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlSchemaSetValidStructuredErrors’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetValidStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlSchemaSetValidStructuredErrors’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlSchemaSetValidStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:53: 错误： ‘xmlSchemaSetParserStructuredErrors’未声明(在此函数内第一次使用)
+conftest.c:5:53: 附注： 每个未声明的标识符在其出现的函数内只报告一次
+conftest.c:5:28: 警告： 变量‘p’被设定但未被使用 [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/i686-linux -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/ruby/backward -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1 -I. -I/opt/local/include/libxml2 -I/usr/local/include/libxml2 -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include/libxml2 -I/opt/local/include -I/usr/local/include -I/home/huxl/.rvm/rubies/ruby-1.9.2-p290/include -I/usr/include -I/usr/include/libxml2 -I/home/huxl/.rvm/usr/include  -D_FILE_OFFSET_BITS=64   -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L. -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -Wl,-R/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/usr/lib -Wl,-R/usr/lib -L/home/huxl/.rvm/usr/lib -Wl,-R/home/huxl/.rvm/usr/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2  -Wl,-R -Wl,/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -L/home/huxl/.rvm/rubies/ruby-1.9.2-p290/lib -lruby-static -lexslt -lxslt -lxml2  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: 在函数‘t’中:
+conftest.c:5:1: 警告： 隐式声明函数‘xmlSchemaSetParserStructuredErrors’ [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { xmlSchemaSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
