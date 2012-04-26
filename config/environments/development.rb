@@ -40,7 +40,7 @@ Lovelou::Application.configure do
     :port               => "25",
     :domain             => "126.com", #you can also use google.com
     :authentication     => "plain",
-    :user_name          => "huxiaolong100@126.com",
+    :user_name          => "csdn_csdn_csdn@126.com",
     :password           => "333425456",
      :enable_starttls_auto => true,
   :openssl_verify_mode  => OpenSSL::SSL::VERIFY_NONE
