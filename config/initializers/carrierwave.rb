@@ -1,4 +1,7 @@
 CarrierWave.configure do |config|
+  config.root = Rails.root.join('tmp')
+  config.cache_dir = 'carrierwave'
+
   config.fog_credentials = {
     :provider                         => 'Google',
     :google_storage_access_key_id     => 'GOOGCWDY6OZVPXKOFEZ3',
