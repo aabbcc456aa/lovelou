@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120416031830) do
+ActiveRecord::Schema.define(:version => 20120427060026) do
 
   create_table "albums", :force => true do |t|
     t.integer  "user_id"
@@ -27,6 +27,25 @@ ActiveRecord::Schema.define(:version => 20120416031830) do
     t.integer  "album_type"
     t.integer  "hits",           :default => 0
     t.integer  "front_photo_id"
+  end
+
+  create_table "diaries", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.integer  "diary_type"
+    t.integer  "diary_permission"
+    t.text     "context"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "kindeditor_assets", :force => true do |t|
+    t.string   "asset"
+    t.string   "file_name"
+    t.integer  "file_size"
+    t.string   "file_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "photos", :force => true do |t|

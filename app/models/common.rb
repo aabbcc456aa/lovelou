@@ -25,4 +25,11 @@ class Common
   def self.get_reply_type(key)
     REPLY_TYPES.select{|t| break t[1] if value == key}
   end
+  
+  #日志分类
+  DIARY_TYPES = [["个人",0],["科技",1],["风景",2],["生活",3],["游记",4],["卡通",5],
+    ["军事",6],["汽车",7],["生活",8],["美食",9],["其他",10]]
+  def self.get_diary_type(key)
+    DIARY_TYPES.select{|t| break t[1] if value == key}
+  end
 end

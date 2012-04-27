@@ -1,0 +1,27 @@
+<%= form_for(@diary) do |f| %>
+  <div id="error_messages"> <%= render "shared/error_messages", :target => @diary %> </div>
+  <fieldset>
+    <p class="subtit">日志标题</p>
+    <div class="field">
+      <%= f.text_field :title, :placeholder =>"请填写标题(* 必填)",  :style => "width:450px" %>
+    </div>  
+     <p class="subtit">日志内容</p>
+    <%= f.kindeditor :content , :height => '450px'%>
+
+  </fieldset>
+  <br>
+  <div class="field">
+    分类(* 必选):&nbsp;&nbsp;&nbsp;&nbsp;
+    <% Common::DIARY_TYPES.each do |t|   %>
+      <%= check_box_tag 'diary_type[]' , "#{t[1]}" %> <%= t[0] %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <% end %>
+  </div>
+  <br>
+  <div class="" style ="align:left">
+    <%= f.submit "立刻发表", :class => "btn primary" %>
+    <%= f.submit "存入草稿箱", :class => "btn primary" %>
+  <%#= f.submit "取消", :class => "btn primary" %>
+  </div>
+<% end %>
+
+

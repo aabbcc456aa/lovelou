@@ -5,13 +5,17 @@ gem 'rails', '3.1.3'
 gem 'thin'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails    /rails.git'
+#db
 gem 'pg'
 gem 'mysql2'
 
+#云存储
 gem 'fog'
 gem 'dropbox-sdk' 
-
+#登录插件
 gem 'devise', '1.5.2'
+#富文本
+gem 'rails_kindeditor', '~> 0.3.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,8 +27,8 @@ end
 #nodejs
 gem 'execjs'
 gem 'therubyracer'
-#gem 'mini_magick'
-#
+
+#图片上传
 gem 'mini_magick'
 gem 'carrierwave'
 #per_page
@@ -38,7 +42,7 @@ gem 'nifty-generators'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'bootstrap-rails', :require => 'bootstrap-rails',
-                              :git => 'git://github.com/xdite/bootstrap-rails.git'
+  :git => 'git://github.com/xdite/bootstrap-rails.git'
            
 
 group :test do

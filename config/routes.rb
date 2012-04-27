@@ -1,4 +1,6 @@
 Lovelou::Application.routes.draw do
+  resources :diaries
+
   resources :replies
 
   resources :albums do

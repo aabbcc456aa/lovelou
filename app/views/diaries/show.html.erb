@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @diary.title %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @diary.user_id %>
+</p>
+
+<p>
+  <b>Diary type:</b>
+  <%= @diary.diary_type %>
+</p>
+
+<p>
+  <b>Diary permission:</b>
+  <%= @diary.diary_permission %>
+</p>
+
+
+<%= link_to 'Edit', edit_diary_path(@diary) %> |
+<%= link_to 'Back', diaries_path %>

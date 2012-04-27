@@ -8,6 +8,7 @@
 //= require jquery.kwicks
 //= require jquery-ui-1.8.18.custom
 //= require jquery.ad-gallery
+//= require kindeditor
 
 
 $().ready(function() {  
