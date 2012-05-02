@@ -8,6 +8,9 @@ module Fog
     def self.new(attributes)
       attributes = attributes.dup # prevent delete from having side effects
       case provider = attributes.delete(:provider).to_s.downcase.to_sym
+      when :google
+        require 'fog/google/compute'
+        Fog::Compute::GOOGLE.new(attributes)
       when :aws
         require 'fog/aws/compute'
         Fog::Compute::AWS.new(attributes)

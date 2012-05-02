@@ -10,7 +10,8 @@ gem 'pg'
 gem 'mysql2'
 
 #云存储
-gem 'fog'
+gem 'fog'#, :path => "vendor/plugins/fog"
+
 gem 'dropbox-sdk' 
 #登录插件
 gem 'devise', '1.5.2'
@@ -31,6 +32,7 @@ gem 'therubyracer'
 #图片上传
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'paperclip'  
 #per_page
 gem 'kaminari'
 
@@ -43,8 +45,10 @@ gem 'simple_form'
 gem 'client_side_validations'
 gem 'bootstrap-rails', :require => 'bootstrap-rails',
   :git => 'git://github.com/xdite/bootstrap-rails.git'
-           
-
+ #清除垃圾日志          
+group :development do
+  gem 'quiet_assets', git: 'git@github.com:AgilionApps/quiet_assets.git', tag: 'v0.1.0'
+end
 group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false

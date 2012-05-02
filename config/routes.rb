@@ -1,4 +1,5 @@
 Lovelou::Application.routes.draw do
+#  match '/upload/image:id' =>
   resources :diaries
 
   resources :replies
