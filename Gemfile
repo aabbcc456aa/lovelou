@@ -42,10 +42,10 @@ gem 'jquery-rails'
 gem 'nifty-generators'
 
 gem 'simple_form'
-gem 'client_side_validations'
 gem 'bootstrap-rails', :require => 'bootstrap-rails',
   :git => 'git://github.com/xdite/bootstrap-rails.git'
- #清除垃圾日志          
+
+#清除垃圾日志          
 group :development do
   gem 'quiet_assets', git: 'git@github.com:AgilionApps/quiet_assets.git', tag: 'v0.1.0'
 end

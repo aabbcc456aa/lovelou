@@ -48,7 +48,7 @@
     <%= form_tag "/albums/{@first_photo.try(:id)||1}/commit_reply" , :name =>"form", :remote => true do %>
       回复：
       <%= hidden_field_tag :reply_type, "photo" %>
-      <%= text_area_tag :content, nil,:cols => 80, :onkeyup => 'jude_button()' %>
+      <%= text_area_tag :content, nil,:cols => 80, :onkeyup => 'jude_button()' ,:onpropertychange => 'jude_button()'%>
       <%= submit_tag "提交", :class =>'btn button' , :id => 'button', :disabled =>"disabled" , :style =>"valign:bottom" %>
     <% end %>
   </div>
