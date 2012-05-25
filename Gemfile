@@ -37,6 +37,7 @@ gem 'paperclip'
 gem 'kaminari'
 
 gem 'jquery-rails'
+gem 'client_side_validations'
 
 # added 
 gem 'nifty-generators'
